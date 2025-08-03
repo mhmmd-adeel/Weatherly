@@ -6,8 +6,8 @@ const Weatherly = () => {
   const [error, setError] = useState('');
 
 
-  const API_KEY = "94e9fd7cfd790077f372ab7549664e7c";
-  const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+ const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
   const getWeather = async () => {
     try {
